@@ -1,0 +1,55 @@
+{
+  "feature_columns": [
+    "team_size",
+    "feature_complexity",
+    "num_dependencies",
+    "sprint_length_weeks",
+    "num_blockers",
+    "holidays_in_sprint",
+    "priority_encoded",
+    "past_avg_delay_days",
+    "estimated_bug_count",
+    "shipment_month",
+    "shipment_quarter",
+    "shipment_dayofweek",
+    "shipment_week",
+    "is_end_of_quarter",
+    "complexity_per_dev",
+    "dependency_blocker_sum",
+    "effective_sprint_days"
+  ],
+  "train_size": 1040,
+  "test_size": 260,
+  "baseline_results": {
+    "Random Forest (default)": {
+      "MAE": 1.1852,
+      "RMSE": 1.4847,
+      "R2": 0.9106
+    },
+    "Gradient Boosting (default)": {
+      "MAE": 0.9331,
+      "RMSE": 1.1815,
+      "R2": 0.9434
+    },
+    "XGBoost (default)": {
+      "MAE": 1.0986,
+      "RMSE": 1.4099,
+      "R2": 0.9194
+    }
+  },
+  "best_params": {
+    "colsample_bytree": 0.9,
+    "learning_rate": 0.05,
+    "max_depth": 3,
+    "n_estimators": 200,
+    "reg_alpha": 0,
+    "reg_lambda": 1.5,
+    "subsample": 0.7
+  },
+  "cv_mae": 0.9112,
+  "fine_tuned_test_metrics": {
+    "MAE": 0.9493,
+    "RMSE": 1.1849,
+    "R2": 0.9431
+  }
+}
